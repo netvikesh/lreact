@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Clock from '../Clock.js';
+import Clock from '../../components/Clock.js';
 
 jest.useFakeTimers();
 
