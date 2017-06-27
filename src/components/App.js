@@ -6,6 +6,7 @@ import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 import _ from "lodash";
 import Greeter from "./Greeter";
+import NavBar from "./NavBar";
 
 const YOUTUBE_API_KEY = 'AIzaSyDj5x-rqaoCTQB4eFkjKTYOUhBUlf7kcKs';
 
