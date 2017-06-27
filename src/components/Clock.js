@@ -36,4 +36,8 @@ class Clock extends Component {
     };
 }
 
+Clock.defaultProps = {
+    date: new Date()
+};
+
 export default Clock;
