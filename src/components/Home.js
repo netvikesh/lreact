@@ -23,7 +23,7 @@ const Home = () => {
                         <li><a href="#YouTubeSearch">YouTubeSearch</a> - Loads a default Search Result and Loads Search Result as you type.</li>
                         <li><a href="#Weather">Weather App</a> - A Weather App</li>
                         <li><a href="#Misc/HelloWorld">Hello World</a> - A Hello World App. It also has a clock component</li>
-                        <li><a href="#Misc/GreeterApp">Greeter</a> - A Form that Greets you with the message you type.</li>
+                        <li><a href="#Misc/Greeter">Greeter</a> - A Form that Greets you with the message you type.</li>
                     </ul>
                 </section>
             </div>
