@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../../components/App';
+import App from '../../components/YouTubeSearch';
 import YTSearch from 'youtube-api-search';
 jest.mock(YTSearch);
 

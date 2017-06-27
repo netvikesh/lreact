@@ -67,7 +67,7 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: D:\\Home-Works\\www\\lreact\\src\\index.js Unexpected token (5:16)\nYou may need an appropriate loader to handle this file type.\n| import App from './components/App.js';\n| \n| ReactDOM.render(<App />, document.getElementById('container'));");
+throw new Error("Module parse failed: D:\\Home-Works\\www\\lreact\\src\\index.js Unexpected token (5:16)\nYou may need an appropriate loader to handle this file type.\n| import App from './components/YouTubeSearch.js';\n| \n| ReactDOM.render(<App />, document.getElementById('container'));");
 
 /***/ })
 /******/ ]);

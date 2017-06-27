@@ -17,19 +17,17 @@ const NavBar = () => {
 
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul className="nav navbar-nav">
-                        <li className="active"><a href="#">YTDemo<span className="sr-only">(current)</span></a></li>
-                        <li><a href="weather">Weather</a></li>
+                        <li className="active"><a href="#YouTubeSearch">YouTubeSearch<span className="sr-only">(current)</span></a></li>
+                        <li><a href="#weather">Weather</a></li>
                         <li className="dropdown">
                             <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">Dropdown <span className="caret"></span></a>
+                               aria-haspopup="true" aria-expanded="false">Misc <span className="caret"></span></a>
                             <ul className="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
+                                <li><a href="#Misc/HelloWorld">HelloWord</a></li>
+                                <li><a href="#Misc/Greeter">Greeter</a></li>
+                                <li role="#Misc/" className="divider"></li>
+                                <li><a href="#Misc/flipkart">Flipkart</a></li>
                                 <li role="separator" className="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li role="separator" className="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -40,7 +38,7 @@ const NavBar = () => {
                         <button type="submit" className="btn btn-default">Submit</button>
                     </form>
                     <ul className="nav navbar-nav navbar-right">
-                        <li><a href="#">Link</a></li>
+                        <li><a href="#About">About</a></li>
                         <li className="dropdown">
                             <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-haspopup="true" aria-expanded="false">Dropdown <span className="caret"></span></a>

@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import GreeterMessage from './GreeterMessage';
-import GreeterForm from './GreeterForm';
+import React, {Component} from "react";
+import GreeterMessage from "./GreeterMessage";
+import GreeterForm from "./GreeterForm";
 
 class Greeter extends Component {
     constructor(props) {
@@ -21,6 +21,10 @@ class Greeter extends Component {
                         message: message
                     })}
 
+                    onNameChange={(message) => this.setState({
+                        name: message
+                    })}
+
                     onFormSubmit={() => this.setState({
                         message: ''
                     })}
@@ -31,8 +35,8 @@ class Greeter extends Component {
 }
 
 Greeter.defaultProps = {
-    name: 'Vikesh Kumar',
-    message: 'Good Morning!'
+    name: 'There.',
+    message: 'Best Wishes.'
 };
 
 export default Greeter;
