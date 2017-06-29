@@ -13,6 +13,7 @@ class GreeterForm extends Component {
         event.preventDefault();
         this.refs.messageValue.value = '';
         this.refs.name.value = '';
+        this.props.onFormSubmit();
     }
 
     render() {
@@ -40,7 +41,7 @@ class GreeterForm extends Component {
                     </div>
                     <div className="form-group">
                         <div className="col-sm-offset-2 col-sm-2">
-                            <button className="form-control btn-default">Reset Inputs</button>
+                            <button className="form-control btn-default" id="submitButton">Reset Inputs</button>
                         </div>
                     </div>
                 </form>

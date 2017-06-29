@@ -1,7 +1,7 @@
 import React from "react";
 import {render} from "react-dom";
 
-const WeatherComponent = () => {
+const Weather = () => {
     return(
         <div>
             <form className="form-group">
@@ -12,4 +12,4 @@ const WeatherComponent = () => {
     )
 };
 
-export default WeatherComponent;
+export default Weather;

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import GreeterMessage from "./GreeterMessage";
 import GreeterForm from "./GreeterForm";
-
+import PropTypes from 'prop-types';
 class Greeter extends Component {
     constructor(props) {
         super(props);
@@ -26,13 +26,20 @@ class Greeter extends Component {
                     })}
 
                     onFormSubmit={() => this.setState({
-                        message: ''
+                        message: Greeter.defaultProps.name,
+                        name: Greeter.defaultProps.message
                     })}
                 />
             </div>
         );
     }
 }
+
+
+Greeter.propTypes = {
+    name: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired,
+};
 
 Greeter.defaultProps = {
     name: 'There.',
