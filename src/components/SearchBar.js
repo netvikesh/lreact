@@ -26,4 +26,8 @@ class SearchBar extends Component {
     }
 }
 
+SearchBar.defaultProps = {
+    term: "Something"
+};
+
 export default SearchBar;

@@ -10,9 +10,15 @@ const VideoList = (props) => {
         )
     });
     return (
-        <ul className="col-md-4 list-group">
-            {videoItems}
-        </ul>
+        <div>
+            <form className="form-group">
+                <h4>Total Results: {props.pageInfo.totalResults}</h4>
+                <ul className="col-md-4 list-group ">
+                    {videoItems}
+                </ul>
+                <button >{props.next}</button>
+            </form>
+        </div>
     );
 };
 

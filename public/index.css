@@ -31,3 +31,11 @@ body {
 .list-group-item:hover {
     background-color: #eee;
 }
+
+.sunrise{
+    transform: rotate(90deg);
+}
+
+.sunset{
+    transform: rotate(270deg);
+}
