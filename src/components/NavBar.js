@@ -1,6 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const NavBar = () => {
+    function isActive(location) {
+        return window.location.href.endsWith(location) ? 'active' : ''
+    };
     return (
         <nav className="navbar navbar-default">
             <div className="container-fluid">
@@ -17,14 +20,16 @@ const NavBar = () => {
 
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul className="nav navbar-nav">
-                        <li className="active"><a href="#YouTubeSearch">YouTubeSearch<span className="sr-only">(current)</span></a></li>
-                        <li><a href="#weather">Weather</a></li>
+                        <li className={isActive('YouTubeSearch')}><a href="#YouTubeSearch">YouTubeSearch<span
+                            className="sr-only">(current)</span></a></li>
+                        <li className={isActive('weather')}><a href="#weather">Weather</a></li>
                         <li className="dropdown">
                             <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-haspopup="true" aria-expanded="false">Misc <span className="caret"></span></a>
                             <ul className="dropdown-menu">
-                                <li><a href="#Misc/HelloWorld">HelloWord</a></li>
-                                <li><a href="#Misc/Greeter">Greeter</a></li>
+                                <li className={isActive('Misc/HelloWorld"')}><a href="#Misc/HelloWorld">HelloWord</a>
+                                </li>
+                                <li className={isActive('Misc/Greeter"')}><a href="#Misc/Greeter">Greeter</a></li>
                                 <li role="#Misc/" className="divider"></li>
                                 <li><a href="#Misc/flipkart">Flipkart</a></li>
                                 <li role="separator" className="divider"></li>
