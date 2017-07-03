@@ -8,6 +8,9 @@ const VideoDetail = ({video}) => {
     const url = `https://www.youtube.com/embed/${videoId}?autoplay=0`;
     return(
       <div className="video-detail col-md-8">
+          <div className="video-detail details">
+              <div>{video.snippet.title}</div>
+          </div>
           <div className="embed-responsive embed-responsive-16by9">
               <iframe
                   className="embed-responsive-item"
@@ -15,9 +18,6 @@ const VideoDetail = ({video}) => {
                   allowFullScreen
                   title={video.snippet.description}
               />
-          </div>
-          <div className="video-detail details">
-              <div>{video.etag}</div>
           </div>
       </div>
     );

@@ -1,10 +1,9 @@
 import React, {Component} from "react";
-import Clock from "./Clock";
 import SearchBar from "./SearchBar";
-import YTSearch from "youtube-api-search";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 import _ from "lodash";
+import * as $ from "jquery";
 
 const YOUTUBE_API_KEY = 'AIzaSyDj5x-rqaoCTQB4eFkjKTYOUhBUlf7kcKs';
 
@@ -13,6 +12,9 @@ class YouTubeSearch extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            next: '',
+            previous: '',
+            pageInfo: {},
             videos: [],
             term: props.term,
             selectedVideo: null
@@ -21,16 +23,26 @@ class YouTubeSearch extends Component {
     }
 
     videoSearch(term) {
-        YTSearch({key: YOUTUBE_API_KEY, term: term}, (videos) => {
-            this.setState({
-                videos: videos,
-                selectedVideo: videos[0]
-            });
+        $.ajax({
+            url: `https://www.googleapis.com/youtube/v3/search?part=snippet&key=${YOUTUBE_API_KEY}&q=${term}&type=video`,
+            method: 'GET',
+            success: (data) => {
+                this.setState({
+                    pageInfo: data.pageInfo,
+                    next: data.nextPageToken,
+                    previous: data.previousPageToken,
+                    videos: data.items,
+                    selectedVideo: data.items[0]
+                })
+            }
         });
+
     }
 
     render() {
-        const videoSearch = _.debounce((term) => {this.videoSearch(term)}, 300);
+        const videoSearch = _.debounce((term) => {
+            this.videoSearch(term)
+        }, 300);
         return (
             <div className="container-fluid">
                 <SearchBar
@@ -38,16 +50,21 @@ class YouTubeSearch extends Component {
                     onSearchTermChange={videoSearch}/>
                 <VideoDetail video={this.state.selectedVideo}/>
                 <VideoList
+                    next={this.state.next}
+                    previous={this.state.previous}
+                    pageInfo={this.state.pageInfo}
                     videos={this.state.videos}
                     onVideoSelect={selectedVideo => this.setState({selectedVideo})}
                 />
             </div>
-        );
+        )
+            ;
     }
 }
 
 YouTubeSearch.defaultProps = {
-  term: 'something'
+    pageInfo: '',
+    term: 'something'
 };
 
 export default YouTubeSearch;
