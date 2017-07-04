@@ -10,6 +10,7 @@ class GreeterForm extends Component {
     }
 
     handleSubmit(event) {
+        debugger;
         event.preventDefault();
         this.refs.messageValue.value = '';
         this.refs.name.value = '';
