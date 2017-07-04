@@ -29,7 +29,9 @@
     "chai": "^4.0.2",
     "chai-spies": "git://github.com/chaijs/chai-spies.git#b11aeebf",
     "enzyme": "^2.9.1",
+    "expect": "^1.20.2",
     "expect-enzyme": "^1.0.0",
+    "gh-pages": "^1.0.0",
     "jest": "^20.0.4",
     "jest-cli": "^15.1.1",
     "jquery": "^3.2.1",
@@ -49,6 +51,9 @@
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
-    "static": "react-snapshot"
-  }
+    "static": "react-snapshot",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
+  },
+  "homepage": "https://netvikesh.github.io/lreact/"
 }
