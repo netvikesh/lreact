@@ -55,5 +55,5 @@
     "predeploy":"npm run build",
     "deploy":"gh-pages -d build"
   },
-  "homepage": "https://netvikesh.github.io/lreact/"
+  "homepage": "https://react.vikesh.net"
 }
